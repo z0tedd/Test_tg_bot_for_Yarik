@@ -1,0 +1,12 @@
+# docker-compose.yaml
+#version: "3.9"
+services:
+  bot:
+    env_file: "api.env"
+    build:
+      context: ./
+    command: python app.py
+    volumes:
+      - ./bot/:/var/app
+    # ports:
+    #   - "8000:8000"
